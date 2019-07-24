@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:4.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -20,7 +20,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "Kingfisher",
-            dependencies: []),
-     exclude: ["Tests", "Sources/AnimatedImageView.swift", "Sources/UIButton+Kingfisher.swift", "Sources/WKInterfaceImage+Kingfisher.swift"]
+            dependencies: [],
+            path: "Sources",
+            exclude: ["./Tests", "AnimatedImageView.swift", "UIButton+Kingfisher.swift", "WKInterfaceImage+Kingfisher.swift"]
+        )
+    ]
 )
+    
 
